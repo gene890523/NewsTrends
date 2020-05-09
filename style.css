@@ -1,0 +1,32 @@
+.loadingScreen {
+    background-color: #ffffff;
+    width: 100vh;
+    height: 100vh;
+}
+
+#waterfallArea {
+    height: 800px;
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#waterfallArea .content_box {
+    float: left;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.content_image {
+    width: 280px;
+    border-radius: 15px;
+}
+
+.content_title {
+    font-size: 14px;
+    width: 280px;
+    color: #3a3a3a;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
