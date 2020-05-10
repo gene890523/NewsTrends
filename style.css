@@ -1,3 +1,7 @@
+html {
+    background: #6fafe3;
+}
+
 .loadingScreen {
     background-color: #ffffff;
     width: 100vh;
