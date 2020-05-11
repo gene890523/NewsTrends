@@ -28,17 +28,21 @@ def renew(date):
 
     for i in range(0, len(data)):
     # for i in range(0, 1)
-        firstArticle = data[i]['articles'][0]
-        print firstArticle['url']
-        print firstArticle['title']
-        firstUrl = firstArticle['url']
-        
-        response = requests.get(firstUrl)
-        # print 'success'
-        soup = BeautifulSoup(response.text, 'lxml')
-        imgUrl = soup.find("meta", property="og:image")['content']
-        print imgUrl
-        imageList.append({'img':imgUrl, 'url':firstUrl, 'title':firstArticle['title']})
+        try:
+            firstArticle = data[i]['articles'][0]
+            print firstArticle['url']
+            print firstArticle['title']
+            firstUrl = firstArticle['url']
+            
+            response = requests.get(firstUrl)
+            # print 'success'
+            soup = BeautifulSoup(response.text, 'lxml')
+            
+            imgUrl = soup.find("meta", property="og:image")['content']
+            print imgUrl
+            imageList.append({'img':imgUrl, 'url':firstUrl, 'title':firstArticle['title']})
+        except Exception as e:
+            print e
 
     # print imageList
 
